@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I LOVE YOU 7BIBTY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .heart-container {
+            position: relative;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .heart {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            background-color: red;
+            transform: rotate(-45deg);
+            box-shadow: 0 0 40px rgba(255, 0, 0, 1);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -90px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 90px;
+        }
+
+        .text {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 1), 0 0 12px rgba(0, 0, 0, 0.8);
+            z-index: 10;
+            
+        }
+
+        @keyframes glow {
+            0% { transform: scale(1); opacity: 0.8; filter: brightness(0.8); }
+            50% { transform: scale(1.1); opacity: 1; filter: brightness(1.4); }
+            100% { transform: scale(1); opacity: 0.8; filter: brightness(0.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-container">
+        <div class="heart"></div>
+        <div class="text">I LOVE YOU<br>7BIBTY</div>
+    </div>
+</body>
+</html>
